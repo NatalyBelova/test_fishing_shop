@@ -17,7 +17,7 @@ from pages.products_page import Products_page
 from pages.user_data_page import User_data_page
 
 
-def test_product_search_1(set_up):
+def test_messenger_whats_app(set_up):
     options = Options()
     options.add_experimental_option('excludeSwitches', ['enable-logging'])
     service = Service(executable_path='C:\\Users\\user\\PycharmProjects\\resource\\chromedriver.exe', chrome_options = options)
@@ -31,15 +31,15 @@ def test_product_search_1(set_up):
     udp.select_main_page()
 
     mp = Main_page(driver)                   # Главная страница
-    mp.search_1()
+    mp.messenger_whats_app()
 
 
     print("Finish Test")
-    time.sleep(5)
+    time.sleep(2)
     driver.quit()
 
 
-def test_product_search_2(set_up):
+def test_messenger_telegram(set_up):
     options = Options()
     options.add_experimental_option('excludeSwitches', ['enable-logging'])
     service = Service(executable_path='C:\\Users\\user\\PycharmProjects\\resource\\chromedriver.exe', chrome_options = options)
@@ -53,14 +53,15 @@ def test_product_search_2(set_up):
     udp.select_main_page()
 
     mp = Main_page(driver)                   # Главная страница
-    mp.search_2()
+    mp.messenger_telegram()
 
 
     print("Finish Test")
+    time.sleep(2)
     driver.quit()
 
 
-def test_product_search_3(set_up):
+def test_messenger_vk(set_up):
     options = Options()
     options.add_experimental_option('excludeSwitches', ['enable-logging'])
     service = Service(executable_path='C:\\Users\\user\\PycharmProjects\\resource\\chromedriver.exe', chrome_options = options)
@@ -74,11 +75,11 @@ def test_product_search_3(set_up):
     udp.select_main_page()
 
     mp = Main_page(driver)                   # Главная страница
-    mp.search_3()
-
+    mp.messenger_vk()
 
     print("Finish Test")
-    time.sleep(5)
+    time.sleep(2
+               )
     driver.quit()
 
 

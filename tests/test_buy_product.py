@@ -43,9 +43,8 @@ def test_buy_product(set_up):
     cip.client_information()
 
 
-
     print("Finish Test")
-    time.sleep(5)
+    time.sleep(2)
     driver.quit()
 
 

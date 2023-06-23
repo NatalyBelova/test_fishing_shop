@@ -13,14 +13,15 @@ class Main_page(Base):
         super().__init__(driver)
         self.driver = driver
 
-
     """Locators"""
 
     catalog_button = "//button[@class='header__btn-catalog btn btn-dark flb-csb']"
     type_product_button_1 = "/html/body/div[2]/div/nav[1]/div[5]/a/span"
     type_product_button_2 = "/html/body/main/div[2]/div/div/div[1]/a[7]"
-    search_button = "//input[@name='search']"
-
+    search = "//input[@name='search']"
+    whats_app_button = "/html/body/div[1]/div/div/div[2]/div[2]/a[1]"
+    telegram_button = "/html/body/div[1]/div/div/div[2]/div[2]/a[2]"
+    vk_button = "/html/body/div[1]/div/div/div[2]/div[2]/a[3]"
 
     """Getters"""
 
@@ -33,9 +34,17 @@ class Main_page(Base):
     def get_type_product_button_2(self):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.type_product_button_2)))
 
-    def get_search_button(self):
+    def get_search(self):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.search_button)))
 
+    def get_whats_app_button(self):
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.whats_app_button)))
+
+    def get_telegram_button(self):
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.telegram_button)))
+
+    def get_vk_button(self):
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.vk_button)))
 
     """Actions"""
 
@@ -51,10 +60,21 @@ class Main_page(Base):
         self.get_type_product_button_2().click()
         print("Click Type Product Button_2")
 
-    def input_search_button(self, search):
-        self.get_search_button().send_keys(search)
-        print("Input Search Button")
+    def input_search(self, search):
+        self.get_search().send_keys(search)
+        print("Input Search")
 
+    def click_whats_app_button(self):
+        self.get_whats_app_button().click()
+        print("Click WhatsApp Button")
+
+    def click_telegram_button(self):
+        self.get_telegram_button().click()
+        print("Click Telegram Button")
+
+    def click_vk_button(self):
+        self.get_vk_button().click()
+        print("Click VK Button")
 
     """Methods"""
 
@@ -64,31 +84,31 @@ class Main_page(Base):
         self.click_type_product_button_2()
 
     def search_1(self):
-        self.input_search_button("Ласты")
-        self.get_screenshot()
-        self.driver.send_keys(Keys.RETURN)
+        self.input_search("Ласты\n")
+        # self.driver.send_keys(Keys.RETURN)
         self.get_screenshot()
 
     def search_2(self):
-        self.input_search_button("Блесна")
-        self.get_screenshot()
-        self.driver.send_keys(Keys.RETURN)
+        self.input_search("Блесна\n")
+        # self.driver.send_keys(Keys.RETURN)
         self.get_screenshot()
 
     def search_3(self):
-        self.input_search_button("Лодка")
+        self.input_search("Лодка\n")
+        # self.driver.send_keys(Keys.RETURN)
         self.get_screenshot()
-        self.driver.send_keys(Keys.RETURN)
-        self.get_screenshot()
 
+    def messenger_whats_app(self):
+        self.click_whats_app_button()
+        time.sleep(3)
+        self.assert_url("https://ohota26.ru/")
 
+    def messenger_telegram(self):
+        self.click_telegram_button()
+        time.sleep(3)
+        self.assert_url("https://ohota26.ru/")
 
-
-
-
-
-
-
-
-
-
+    def messenger_vk(self):
+        self.click_vk_button()
+        time.sleep(3)
+        self.assert_url("https://ohota26.ru/")
