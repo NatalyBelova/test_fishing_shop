@@ -33,7 +33,6 @@ def test_messenger_whats_app(set_up):
     mp = Main_page(driver)                   # Главная страница
     mp.messenger_whats_app()
 
-
     print("Finish Test")
     time.sleep(2)
     driver.quit()
@@ -54,7 +53,6 @@ def test_messenger_telegram(set_up):
 
     mp = Main_page(driver)                   # Главная страница
     mp.messenger_telegram()
-
 
     print("Finish Test")
     time.sleep(2)

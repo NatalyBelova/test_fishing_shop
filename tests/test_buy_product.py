@@ -42,7 +42,6 @@ def test_buy_product(set_up):
     cip = Client_information_page(driver)    # Страница заполнения данных для заказа
     cip.client_information()
 
-
     print("Finish Test")
     time.sleep(2)
     driver.quit()

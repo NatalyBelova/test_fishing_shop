@@ -33,7 +33,6 @@ def test_product_search_1(set_up):
     mp = Main_page(driver)                   # Главная страница
     mp.search_1()
 
-
     print("Finish Test")
     time.sleep(5)
     driver.quit()
@@ -55,7 +54,6 @@ def test_product_search_2(set_up):
     mp = Main_page(driver)                   # Главная страница
     mp.search_2()
 
-
     print("Finish Test")
     driver.quit()
 
@@ -75,7 +73,6 @@ def test_product_search_3(set_up):
 
     mp = Main_page(driver)                   # Главная страница
     mp.search_3()
-
 
     print("Finish Test")
     time.sleep(5)
