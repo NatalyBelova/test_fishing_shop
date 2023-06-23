@@ -78,8 +78,7 @@ def test_messenger_vk(set_up):
     mp.messenger_vk()
 
     print("Finish Test")
-    time.sleep(2
-               )
+    time.sleep(2)
     driver.quit()
 
 
