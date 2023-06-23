@@ -1,5 +1,7 @@
 import time
 from telnetlib import EC
+
+from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -30,6 +32,7 @@ class Client_information_page(Base):
     city = "//input[@name='adress_city']"
     address = "//input[@name='adress_all']"
     index = "//input[@name='adress_idex']"
+    checkout_button = "//button[@class='order__form-submit btn-submit btn btn-orange mb10']"
 
 
     """Getters"""
@@ -69,6 +72,9 @@ class Client_information_page(Base):
 
     def get_index(self):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.index)))
+
+    def get_checkout_button(self):
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.checkout_button)))
 
 
     """Actions"""
@@ -121,6 +127,10 @@ class Client_information_page(Base):
         self.get_index().send_keys(index)
         print("Input Index")
 
+    def click_checkout_button(self):
+        self.get_checkout_button().click()
+        print("CLick Checkout Button")
+
 
     """Methods"""
 
@@ -138,7 +148,9 @@ class Client_information_page(Base):
         self.input_city(fake.city())
         self.input_address(fake.address())
         self.input_index(fake.postcode())
-        self.driver.execute_script("window.scrollTo(-1, 0)")
+        self.driver.execute_script("window.scrollTo(0, 350)")
+        self.get_screenshot()
+        self.click_checkout_button()
         self.get_screenshot()
 
 

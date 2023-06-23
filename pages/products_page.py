@@ -81,7 +81,7 @@ class Products_page(Base):
         self.click_filter_size_check_box()
         self.click_filter_weight()
         self.click_filter_weight_check_box()
-        self.driver.execute_script("window.scrollTo(-1, 0)")
+        self.driver.execute_script("window.scrollTo(0, -300)")
         time.sleep(1)
         self.click_add_to_cart_button()
         self.get_screenshot()

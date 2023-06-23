@@ -24,22 +24,22 @@ def test_buy_product(set_up):
     driver = webdriver.Chrome(service=service)
     print("Start Test")
 
-    lp = Login_page(driver)  # Авторизация
+    lp = Login_page(driver)                  # Авторизация
     lp.authorisation()
 
-    udp = User_data_page(driver) # Страница с данными пользователя
+    udp = User_data_page(driver)             # Страница с данными пользователя
     udp.select_main_page()
 
-    mp = Main_page(driver) # Главная страница
+    mp = Main_page(driver)                   # Главная страница
     mp.select_menu()
 
-    pp = Products_page(driver) # Страница с продуктами
+    pp = Products_page(driver)               # Страница с продуктами
     pp.select_products()
 
-    cp = Cart_page(driver) # Страница корзины
+    cp = Cart_page(driver)                   # Страница корзины
     cp.product_confirmation()
 
-    cip = Client_information_page(driver)
+    cip = Client_information_page(driver)    # Страница заполнения данных для заказа
     cip.client_information()
 
 
