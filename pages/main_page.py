@@ -35,7 +35,7 @@ class Main_page(Base):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.type_product_button_2)))
 
     def get_search(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.search_button)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.search)))
 
     def get_whats_app_button(self):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.whats_app_button)))
@@ -100,15 +100,15 @@ class Main_page(Base):
 
     def messenger_whats_app(self):
         self.click_whats_app_button()
-        time.sleep(3)
+        time.sleep(2)
         self.assert_url("https://ohota26.ru/")
 
     def messenger_telegram(self):
         self.click_telegram_button()
-        time.sleep(3)
+        time.sleep(2)
         self.assert_url("https://ohota26.ru/")
 
     def messenger_vk(self):
         self.click_vk_button()
-        time.sleep(3)
+        time.sleep(2)
         self.assert_url("https://ohota26.ru/")
