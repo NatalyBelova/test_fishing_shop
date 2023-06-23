@@ -79,36 +79,50 @@ class Main_page(Base):
     """Methods"""
 
     def select_menu(self):
+        self.get_current_url()
+        self.assert_url("https://ohota26.ru/")
         self.click_catalog_button()
         self.click_type_product_button_1()
         self.click_type_product_button_2()
 
     def search_1(self):
+        self.get_current_url()
+        self.assert_url("https://ohota26.ru/")
         self.input_search("Ласты\n")
         # self.driver.send_keys(Keys.RETURN)
         self.get_screenshot()
 
     def search_2(self):
+        self.get_current_url()
+        self.assert_url("https://ohota26.ru/")
         self.input_search("Блесна\n")
         # self.driver.send_keys(Keys.RETURN)
         self.get_screenshot()
 
     def search_3(self):
+        self.get_current_url()
+        self.assert_url("https://ohota26.ru/")
         self.input_search("Лодка\n")
         # self.driver.send_keys(Keys.RETURN)
         self.get_screenshot()
 
     def messenger_whats_app(self):
+        self.get_current_url()
+        self.assert_url("https://ohota26.ru/")
         self.click_whats_app_button()
         time.sleep(2)
         self.assert_url("https://ohota26.ru/")
 
     def messenger_telegram(self):
+        self.get_current_url()
+        self.assert_url("https://ohota26.ru/")
         self.click_telegram_button()
         time.sleep(2)
         self.assert_url("https://ohota26.ru/")
 
     def messenger_vk(self):
+        self.get_current_url()
+        self.assert_url("https://ohota26.ru/")
         self.click_vk_button()
         time.sleep(2)
         self.assert_url("https://ohota26.ru/")
