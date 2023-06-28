@@ -1,0 +1,264 @@
+
+-----
+Test: tests/test_buy_product.py::test_buy_product (call)
+Start time: 2023-06-28 20:05:47.713265
+Start name method: authorisation
+
+End time: 2023-06-28 20:06:05.107728
+End name method: authorisation
+URL: https://ohota26.ru/user/27
+
+-----
+
+-----
+Test: tests/test_buy_product.py::test_buy_product (call)
+Start time: 2023-06-28 20:06:05.108721
+Start name method: select_main_page
+
+End time: 2023-06-28 20:06:15.117802
+End name method: select_main_page
+URL: https://ohota26.ru/
+
+-----
+
+-----
+Test: tests/test_buy_product.py::test_buy_product (call)
+Start time: 2023-06-28 20:06:15.118794
+Start name method: select_menu
+
+End time: 2023-06-28 20:06:28.367642
+End name method: select_menu
+URL: https://ohota26.ru/turizm/spal-nye-meshki
+
+-----
+
+-----
+Test: tests/test_buy_product.py::test_buy_product (call)
+Start time: 2023-06-28 20:06:28.368636
+Start name method: select_products
+
+End time: 2023-06-28 20:06:35.693413
+End name method: select_products
+URL: https://ohota26.ru/cart
+
+-----
+
+-----
+Test: tests/test_buy_product.py::test_buy_product (call)
+Start time: 2023-06-28 20:06:35.694406
+Start name method: product_confirmation
+
+End time: 2023-06-28 20:06:40.024882
+End name method: product_confirmation
+URL: https://ohota26.ru/order
+
+-----
+
+-----
+Test: tests/test_buy_product.py::test_buy_product (call)
+Start time: 2023-06-28 20:06:40.024882
+Start name method: client_information
+
+End time: 2023-06-28 20:06:50.740930
+End name method: client_information
+URL: https://ohota26.ru/success_order
+
+-----
+
+-----
+Test: tests/test_messenger.py::test_messenger_whats_app (call)
+Start time: 2023-06-28 20:07:05.550316
+Start name method: authorisation
+
+End time: 2023-06-28 20:07:16.652125
+End name method: authorisation
+URL: https://ohota26.ru/user/27
+
+-----
+
+-----
+Test: tests/test_messenger.py::test_messenger_whats_app (call)
+Start time: 2023-06-28 20:07:16.653118
+Start name method: select_main_page
+
+End time: 2023-06-28 20:07:25.207447
+End name method: select_main_page
+URL: https://ohota26.ru/
+
+-----
+
+-----
+Test: tests/test_messenger.py::test_messenger_whats_app (call)
+Start time: 2023-06-28 20:07:25.207447
+Start name method: messenger_whats_app
+
+End time: 2023-06-28 20:07:31.310948
+End name method: messenger_whats_app
+URL: https://ohota26.ru/
+
+-----
+
+-----
+Test: tests/test_messenger.py::test_messenger_telegram (call)
+Start time: 2023-06-28 20:07:44.339217
+Start name method: authorisation
+
+End time: 2023-06-28 20:07:54.658062
+End name method: authorisation
+URL: https://ohota26.ru/user/27
+
+-----
+
+-----
+Test: tests/test_messenger.py::test_messenger_telegram (call)
+Start time: 2023-06-28 20:07:54.659056
+Start name method: select_main_page
+
+End time: 2023-06-28 20:08:04.647754
+End name method: select_main_page
+URL: https://ohota26.ru/
+
+-----
+
+-----
+Test: tests/test_messenger.py::test_messenger_telegram (call)
+Start time: 2023-06-28 20:08:04.648747
+Start name method: messenger_telegram
+
+End time: 2023-06-28 20:08:07.339064
+End name method: messenger_telegram
+URL: https://ohota26.ru/
+
+-----
+
+-----
+Test: tests/test_messenger.py::test_messenger_vk (call)
+Start time: 2023-06-28 20:08:19.373216
+Start name method: authorisation
+
+End time: 2023-06-28 20:08:32.618298
+End name method: authorisation
+URL: https://ohota26.ru/user/27
+
+-----
+
+-----
+Test: tests/test_messenger.py::test_messenger_vk (call)
+Start time: 2023-06-28 20:08:32.619291
+Start name method: select_main_page
+
+End time: 2023-06-28 20:08:41.352755
+End name method: select_main_page
+URL: https://ohota26.ru/
+
+-----
+
+-----
+Test: tests/test_messenger.py::test_messenger_vk (call)
+Start time: 2023-06-28 20:08:41.353748
+Start name method: messenger_vk
+
+End time: 2023-06-28 20:08:44.188302
+End name method: messenger_vk
+URL: https://ohota26.ru/
+
+-----
+
+-----
+Test: tests/test_product_search.py::test_product_search_1 (call)
+Start time: 2023-06-28 20:08:55.155532
+Start name method: authorisation
+
+End time: 2023-06-28 20:09:06.165454
+End name method: authorisation
+URL: https://ohota26.ru/user/27
+
+-----
+
+-----
+Test: tests/test_product_search.py::test_product_search_1 (call)
+Start time: 2023-06-28 20:09:06.166450
+Start name method: select_main_page
+
+End time: 2023-06-28 20:09:16.067879
+End name method: select_main_page
+URL: https://ohota26.ru/
+
+-----
+
+-----
+Test: tests/test_product_search.py::test_product_search_1 (call)
+Start time: 2023-06-28 20:09:16.067879
+Start name method: search_1
+
+End time: 2023-06-28 20:09:23.529955
+End name method: search_1
+URL: https://ohota26.ru/search?search=%D0%9B%D0%B0%D1%81%D1%82%D1%8B
+
+-----
+
+-----
+Test: tests/test_product_search.py::test_product_search_2 (call)
+Start time: 2023-06-28 20:09:42.118116
+Start name method: authorisation
+
+End time: 2023-06-28 20:09:53.860269
+End name method: authorisation
+URL: https://ohota26.ru/user/27
+
+-----
+
+-----
+Test: tests/test_product_search.py::test_product_search_2 (call)
+Start time: 2023-06-28 20:09:53.861262
+Start name method: select_main_page
+
+End time: 2023-06-28 20:10:03.393481
+End name method: select_main_page
+URL: https://ohota26.ru/
+
+-----
+
+-----
+Test: tests/test_product_search.py::test_product_search_2 (call)
+Start time: 2023-06-28 20:10:03.394474
+Start name method: search_2
+
+End time: 2023-06-28 20:10:08.586888
+End name method: search_2
+URL: https://ohota26.ru/search?search=%D0%91%D0%BB%D0%B5%D1%81%D0%BD%D0%B0
+
+-----
+
+-----
+Test: tests/test_product_search.py::test_product_search_3 (call)
+Start time: 2023-06-28 20:10:18.130316
+Start name method: authorisation
+
+End time: 2023-06-28 20:10:29.180731
+End name method: authorisation
+URL: https://ohota26.ru/user/27
+
+-----
+
+-----
+Test: tests/test_product_search.py::test_product_search_3 (call)
+Start time: 2023-06-28 20:10:29.181723
+Start name method: select_main_page
+
+End time: 2023-06-28 20:10:38.461213
+End name method: select_main_page
+URL: https://ohota26.ru/
+
+-----
+
+-----
+Test: tests/test_product_search.py::test_product_search_3 (call)
+Start time: 2023-06-28 20:10:38.462206
+Start name method: search_3
+
+End time: 2023-06-28 20:10:45.270005
+End name method: search_3
+URL: https://ohota26.ru/search?search=%D0%9B%D0%BE%D0%B4%D0%BA%D0%B0
+
+-----
