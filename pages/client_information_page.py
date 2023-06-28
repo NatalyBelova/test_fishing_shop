@@ -9,6 +9,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from base.base_class import Base
 from faker import Faker
 
+from utilities.logger import Logger
+
 
 class Client_information_page(Base):
 
@@ -136,6 +138,7 @@ class Client_information_page(Base):
 
     """Заполняем данные о клиенте для оформления заказа"""
     def client_information(self):
+        Logger.add_start_step(method='client_information')
         fake = Faker("ru_RU")
         self.input_last_name("Иванов")
         self.input_surname("Иванович")
@@ -153,5 +156,6 @@ class Client_information_page(Base):
         self.get_screenshot()
         self.click_checkout_button()
         self.get_screenshot()
+        Logger.add_end_step(url=self.driver.current_url, method='client_information')
 
 

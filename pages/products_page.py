@@ -5,6 +5,7 @@ from selenium.webdriver import ActionChains
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from base.base_class import Base
+from utilities.logger import Logger
 
 
 class Products_page(Base):
@@ -78,6 +79,7 @@ class Products_page(Base):
 
     """Используем определенные фильтры для выбора нужного товара"""
     def select_products(self):
+        Logger.add_start_step(method='select_products')
         self.click_filter_size()
         self.click_filter_size_check_box()
         self.click_filter_weight()
@@ -87,4 +89,5 @@ class Products_page(Base):
         self.click_add_to_cart_button()
         self.get_screenshot()
         self.click_cart()
+        Logger.add_end_step(url=self.driver.current_url, method='select_products')
 

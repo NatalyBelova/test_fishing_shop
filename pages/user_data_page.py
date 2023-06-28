@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from base.base_class import Base
+from utilities.logger import Logger
 
 
 class User_data_page(Base):
@@ -34,8 +35,10 @@ class User_data_page(Base):
 
     """Переходим на главную страницу со страницы личного кабинета пользователя"""
     def select_main_page(self):
+        Logger.add_start_step(method='select_main_page')
         self.click_main_page_button()
         self.assert_url("https://ohota26.ru/")
+        Logger.add_end_step(url=self.driver.current_url, method='select_main_page')
 
 
 
