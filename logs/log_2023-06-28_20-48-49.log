@@ -1,0 +1,66 @@
+
+-----
+Test: tests/test_buy_product.py::test_buy_product (call)
+Start time: 2023-06-28 20:48:54.098789
+Start name method: authorisation
+
+End time: 2023-06-28 20:49:13.813769
+End name method: authorisation
+URL: https://ohota26.ru/user/27
+
+-----
+
+-----
+Test: tests/test_buy_product.py::test_buy_product (call)
+Start time: 2023-06-28 20:49:13.814763
+Start name method: select_main_page
+
+End time: 2023-06-28 20:49:23.288565
+End name method: select_main_page
+URL: https://ohota26.ru/
+
+-----
+
+-----
+Test: tests/test_buy_product.py::test_buy_product (call)
+Start time: 2023-06-28 20:49:23.289558
+Start name method: select_menu
+
+End time: 2023-06-28 20:49:34.014188
+End name method: select_menu
+URL: https://ohota26.ru/turizm/spal-nye-meshki
+
+-----
+
+-----
+Test: tests/test_buy_product.py::test_buy_product (call)
+Start time: 2023-06-28 20:49:34.015182
+Start name method: select_products
+
+End time: 2023-06-28 20:49:45.171636
+End name method: select_products
+URL: https://ohota26.ru/cart
+
+-----
+
+-----
+Test: tests/test_buy_product.py::test_buy_product (call)
+Start time: 2023-06-28 20:49:45.171636
+Start name method: product_confirmation
+
+End time: 2023-06-28 20:49:49.432196
+End name method: product_confirmation
+URL: https://ohota26.ru/order
+
+-----
+
+-----
+Test: tests/test_buy_product.py::test_buy_product (call)
+Start time: 2023-06-28 20:49:49.433190
+Start name method: client_information
+
+End time: 2023-06-28 20:50:04.857516
+End name method: client_information
+URL: https://ohota26.ru/success_order
+
+-----

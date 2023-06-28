@@ -145,6 +145,7 @@ class Main_page(Base):
         self.get_current_url()
         self.assert_url("https://ohota26.ru/")
         self.click_vk_button()
+
         time.sleep(2)
         self.assert_url("https://ohota26.ru/")
         Logger.add_end_step(url=self.driver.current_url, method='messenger_vk')
