@@ -36,6 +36,7 @@ class Cart_page(Base):
 
     """Methods"""
 
+    """Сверяем, что в корзине верный продукт и нажимаем кнопку продолжить"""
     def product_confirmation(self):
         self.assert_word(self.get_value_product(), "Мешок Tramp спальный Mersey R оранжево-серый TRS-019")
         self.get_screenshot()

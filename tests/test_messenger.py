@@ -16,7 +16,7 @@ from pages.main_page import Main_page
 from pages.products_page import Products_page
 from pages.user_data_page import User_data_page
 
-
+"""Расширенное тестирование. Проверка перехода на мессенеджер WhatsApp"""
 def test_messenger_whats_app(set_up):
     options = Options()
     options.add_experimental_option('excludeSwitches', ['enable-logging'])
@@ -37,7 +37,7 @@ def test_messenger_whats_app(set_up):
     time.sleep(2)
     driver.quit()
 
-
+"""Расширенное тестирование. Проверка перехода на мессенеджер Telegram"""
 def test_messenger_telegram(set_up):
     options = Options()
     options.add_experimental_option('excludeSwitches', ['enable-logging'])
@@ -58,7 +58,7 @@ def test_messenger_telegram(set_up):
     time.sleep(2)
     driver.quit()
 
-
+"""Расширенное тестирование. Проверка перехода на мессенеджер VK"""
 def test_messenger_vk(set_up):
     options = Options()
     options.add_experimental_option('excludeSwitches', ['enable-logging'])

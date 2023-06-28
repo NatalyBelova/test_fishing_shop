@@ -134,6 +134,7 @@ class Client_information_page(Base):
 
     """Methods"""
 
+    """Заполняем данные о клиенте для оформления заказа"""
     def client_information(self):
         fake = Faker("ru_RU")
         self.input_last_name("Иванов")

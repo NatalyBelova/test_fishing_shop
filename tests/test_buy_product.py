@@ -17,6 +17,7 @@ from pages.products_page import Products_page
 from pages.user_data_page import User_data_page
 
 
+"""Smoke-тестирование полного бизнес-процесса продукта"""
 def test_buy_product(set_up):
     options = Options()
     options.add_experimental_option('excludeSwitches', ['enable-logging'])

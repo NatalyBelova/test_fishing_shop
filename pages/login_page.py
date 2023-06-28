@@ -53,6 +53,7 @@ class Login_page(Base):
 
     """Methods"""
 
+    """Вводим данные для авторизации на сайте и входим на сайт"""
     def authorisation(self):
         self.driver.get(self.url) # Метод, который открывает нашу url
         self.driver.maximize_window()

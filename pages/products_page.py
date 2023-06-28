@@ -76,6 +76,7 @@ class Products_page(Base):
 
     """Methods"""
 
+    """Используем определенные фильтры для выбора нужного товара"""
     def select_products(self):
         self.click_filter_size()
         self.click_filter_size_check_box()

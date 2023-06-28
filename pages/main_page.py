@@ -78,6 +78,7 @@ class Main_page(Base):
 
     """Methods"""
 
+    """Выбор определенных продуктов из меню"""
     def select_menu(self):
         self.get_current_url()
         self.assert_url("https://ohota26.ru/")
@@ -85,6 +86,7 @@ class Main_page(Base):
         self.click_type_product_button_1()
         self.click_type_product_button_2()
 
+    """Используем строку поиска по слову Ласты"""
     def search_1(self):
         self.get_current_url()
         self.assert_url("https://ohota26.ru/")
@@ -92,6 +94,7 @@ class Main_page(Base):
         # self.driver.send_keys(Keys.RETURN)
         self.get_screenshot()
 
+    """Используем строку поиска по слову Блесна"""
     def search_2(self):
         self.get_current_url()
         self.assert_url("https://ohota26.ru/")
@@ -99,6 +102,7 @@ class Main_page(Base):
         # self.driver.send_keys(Keys.RETURN)
         self.get_screenshot()
 
+    """Используем строку поиска по слову Лодка"""
     def search_3(self):
         self.get_current_url()
         self.assert_url("https://ohota26.ru/")
@@ -106,6 +110,7 @@ class Main_page(Base):
         # self.driver.send_keys(Keys.RETURN)
         self.get_screenshot()
 
+    """Переход в мессенджер WhatsApp"""
     def messenger_whats_app(self):
         self.get_current_url()
         self.assert_url("https://ohota26.ru/")
@@ -113,6 +118,7 @@ class Main_page(Base):
         time.sleep(2)
         self.assert_url("https://ohota26.ru/")
 
+    """Переход в мессенджер Telegram"""
     def messenger_telegram(self):
         self.get_current_url()
         self.assert_url("https://ohota26.ru/")
@@ -120,6 +126,7 @@ class Main_page(Base):
         time.sleep(2)
         self.assert_url("https://ohota26.ru/")
 
+    """Переход в мессенджер Vk"""
     def messenger_vk(self):
         self.get_current_url()
         self.assert_url("https://ohota26.ru/")

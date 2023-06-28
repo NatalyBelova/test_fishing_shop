@@ -32,6 +32,7 @@ class User_data_page(Base):
 
     """Methods"""
 
+    """Переходим на главную страницу со страницы личного кабинета пользователя"""
     def select_main_page(self):
         self.click_main_page_button()
         self.assert_url("https://ohota26.ru/")
