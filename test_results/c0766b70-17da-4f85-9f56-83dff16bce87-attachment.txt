@@ -1,0 +1,13 @@
+Start Test
+Start Test
+Current url https://ohota26.ru/login
+Input Login Button
+Input Password
+CLick Enter Button
+CLick Main Page Button
+Good value url
+Current url https://ohota26.ru/
+Good value url
+Input Search
+Finish Test
+Finish Test

@@ -1,6 +1,7 @@
 import time
 from telnetlib import EC
 
+import allure
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -18,6 +19,7 @@ from pages.user_data_page import User_data_page
 
 
 """Smoke-тестирование полного бизнес-процесса продукта"""
+@allure.description("Test buy product")
 def test_buy_product(set_up):
     options = Options()
     options.add_experimental_option('excludeSwitches', ['enable-logging'])

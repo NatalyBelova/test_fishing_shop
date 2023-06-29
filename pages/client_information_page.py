@@ -1,6 +1,7 @@
 import time
 from telnetlib import EC
 
+import allure
 from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
@@ -138,24 +139,25 @@ class Client_information_page(Base):
 
     """Заполняем данные о клиенте для оформления заказа"""
     def client_information(self):
-        Logger.add_start_step(method='client_information')
-        fake = Faker("ru_RU")
-        self.input_last_name("Иванов")
-        self.input_surname("Иванович")
-        self.input_number_phone("+71112223344")
-        self.click_delivery_method_button_1()
-        self.click_delivery_method_button_2()
-        self.click_payment_method_button_1()
-        self.click_payment_method_button_2()
-        self.input_region("-")
-        self.input_area(fake.street_name())
-        self.input_city(fake.city())
-        self.input_address(fake.address())
-        self.input_index(fake.postcode())
-        self.driver.execute_script("window.scrollTo(0, 350)")
-        self.get_screenshot()
-        self.click_checkout_button()
-        self.get_screenshot()
-        Logger.add_end_step(url=self.driver.current_url, method='client_information')
+        with allure.step("Client information"):
+            Logger.add_start_step(method='client_information')
+            fake = Faker("ru_RU")
+            self.input_last_name("Иванов")
+            self.input_surname("Иванович")
+            self.input_number_phone("+71112223344")
+            self.click_delivery_method_button_1()
+            self.click_delivery_method_button_2()
+            self.click_payment_method_button_1()
+            self.click_payment_method_button_2()
+            self.input_region("-")
+            self.input_area(fake.street_name())
+            self.input_city(fake.city())
+            self.input_address(fake.address())
+            self.input_index(fake.postcode())
+            self.driver.execute_script("window.scrollTo(0, 350)")
+            self.get_screenshot()
+            self.click_checkout_button()
+            self.get_screenshot()
+            Logger.add_end_step(url=self.driver.current_url, method='client_information')
 
 

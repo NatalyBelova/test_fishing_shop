@@ -1,0 +1,36 @@
+Start Test
+Start Test
+Current url https://ohota26.ru/login
+Input Login Button
+Input Password
+CLick Enter Button
+CLick Main Page Button
+Good value url
+Current url https://ohota26.ru/
+Good value url
+Click Catalog Button
+Click Type Product Button_1
+Click Type Product Button_2
+Click Filter Size
+Click Filter Size Check Box
+Click Filter Weight
+Click Filter Weight Check Box
+Click Add To Cart Button
+Click Cart
+Good value word
+Get Make Order Button
+Input Last Name
+Input Surname
+Input Number Phone
+CLick Delivery Method Button_1
+CLick Delivery Method Button_2
+CLick Payment Method Button_1
+CLick Payment Method Button_2
+Input Region
+Input Area
+Input City
+Input Address
+Input Index
+CLick Checkout Button
+Finish Test
+Finish Test

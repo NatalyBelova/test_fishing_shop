@@ -1,6 +1,7 @@
 import time
 from telnetlib import EC
 
+import allure
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -56,14 +57,15 @@ class Login_page(Base):
 
     """Вводим данные для авторизации на сайте и входим на сайт"""
     def authorisation(self):
-        Logger.add_start_step(method='authorisation')
-        self.driver.get(self.url) # Метод, который открывает нашу url
-        self.driver.maximize_window()
-        self.get_current_url()
-        self.input_login_button("test.qa@yandex.ru")
-        self.input_password("11223344")
-        self.click_enter_button()
-        Logger.add_end_step(url=self.driver.current_url, method='authorisation')
+        with allure.step("Authorisation"):
+            Logger.add_start_step(method='authorisation')
+            self.driver.get(self.url) # Метод, который открывает нашу url
+            self.driver.maximize_window()
+            self.get_current_url()
+            self.input_login_button("test.qa@yandex.ru")
+            self.input_password("11223344")
+            self.click_enter_button()
+            Logger.add_end_step(url=self.driver.current_url, method='authorisation')
 
 
 

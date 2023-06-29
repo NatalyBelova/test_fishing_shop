@@ -1,6 +1,7 @@
 import time
 from telnetlib import EC
 
+import allure
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -17,6 +18,7 @@ from pages.products_page import Products_page
 from pages.user_data_page import User_data_page
 
 """Расширенное тестирование. Проверка перехода на мессенеджер WhatsApp"""
+@allure.description("Test messenger WhatsApp")
 def test_messenger_whats_app(set_up):
     options = Options()
     options.add_experimental_option('excludeSwitches', ['enable-logging'])
@@ -38,6 +40,7 @@ def test_messenger_whats_app(set_up):
     driver.quit()
 
 """Расширенное тестирование. Проверка перехода на мессенеджер Telegram"""
+@allure.description("Test messenger Telegram")
 def test_messenger_telegram(set_up):
     options = Options()
     options.add_experimental_option('excludeSwitches', ['enable-logging'])
@@ -59,6 +62,7 @@ def test_messenger_telegram(set_up):
     driver.quit()
 
 """Расширенное тестирование. Проверка перехода на мессенеджер VK"""
+@allure.description("Test messenger VK")
 def test_messenger_vk(set_up):
     options = Options()
     options.add_experimental_option('excludeSwitches', ['enable-logging'])

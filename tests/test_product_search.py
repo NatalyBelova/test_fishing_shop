@@ -1,6 +1,7 @@
 import time
 from telnetlib import EC
 
+import allure
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -17,6 +18,7 @@ from pages.products_page import Products_page
 from pages.user_data_page import User_data_page
 
 """Расширенное тестирование. Проверка верной работы строки поиска по слову Ласты"""
+@allure.description("Test product search 1")
 def test_product_search_1(set_up):
     options = Options()
     options.add_experimental_option('excludeSwitches', ['enable-logging'])
@@ -38,6 +40,7 @@ def test_product_search_1(set_up):
     driver.quit()
 
 """Расширенное тестирование. Проверка верной работы строки поиска по слову Блесна"""
+@allure.description("Test product search 2")
 def test_product_search_2(set_up):
     options = Options()
     options.add_experimental_option('excludeSwitches', ['enable-logging'])
@@ -58,6 +61,7 @@ def test_product_search_2(set_up):
     driver.quit()
 
 """Расширенное тестирование. Проверка верной работы строки поиска по слову Лодка"""
+@allure.description("Test product search 3")
 def test_product_search_3(set_up):
     options = Options()
     options.add_experimental_option('excludeSwitches', ['enable-logging'])

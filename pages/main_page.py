@@ -1,5 +1,6 @@
 import time
 
+import allure
 from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
@@ -81,72 +82,78 @@ class Main_page(Base):
 
     """Выбор определенных продуктов из меню"""
     def select_menu(self):
-        Logger.add_start_step(method='select_menu')
-        self.get_current_url()
-        self.assert_url("https://ohota26.ru/")
-        self.click_catalog_button()
-        self.click_type_product_button_1()
-        self.click_type_product_button_2()
-        Logger.add_end_step(url=self.driver.current_url, method='select_menu')
+        with allure.step("Select menu"):
+            Logger.add_start_step(method='select_menu')
+            self.get_current_url()
+            self.assert_url("https://ohota26.ru/")
+            self.click_catalog_button()
+            self.click_type_product_button_1()
+            self.click_type_product_button_2()
+            Logger.add_end_step(url=self.driver.current_url, method='select_menu')
 
     """Используем строку поиска по слову Ласты"""
     def search_1(self):
-        Logger.add_start_step(method='search_1')
-        self.get_current_url()
-        self.assert_url("https://ohota26.ru/")
-        self.input_search("Ласты\n")
-        # self.driver.send_keys(Keys.RETURN)
-        self.get_screenshot()
-        Logger.add_end_step(url=self.driver.current_url, method='search_1')
+        with allure.step("Search 1"):
+            Logger.add_start_step(method='search_1')
+            self.get_current_url()
+            self.assert_url("https://ohota26.ru/")
+            self.input_search("Ласты\n")
+            # self.driver.send_keys(Keys.RETURN)
+            self.get_screenshot()
+            Logger.add_end_step(url=self.driver.current_url, method='search_1')
 
     """Используем строку поиска по слову Блесна"""
     def search_2(self):
-        Logger.add_start_step(method='search_2')
-        self.get_current_url()
-        self.assert_url("https://ohota26.ru/")
-        self.input_search("Блесна\n")
-        # self.driver.send_keys(Keys.RETURN)c
-        Logger.add_end_step(url=self.driver.current_url, method='search_2')
+        with allure.step("Search 21"):
+            Logger.add_start_step(method='search_2')
+            self.get_current_url()
+            self.assert_url("https://ohota26.ru/")
+            self.input_search("Блесна\n")
+            # self.driver.send_keys(Keys.RETURN)c
+            Logger.add_end_step(url=self.driver.current_url, method='search_2')
 
 
     """Используем строку поиска по слову Лодка"""
     def search_3(self):
-        Logger.add_start_step(method='search_3')
-        self.get_current_url()
-        self.assert_url("https://ohota26.ru/")
-        self.input_search("Лодка\n")
-        # self.driver.send_keys(Keys.RETURN)
-        self.get_screenshot()
-        Logger.add_end_step(url=self.driver.current_url, method='search_3')
+        with allure.step("Search 3"):
+            Logger.add_start_step(method='search_3')
+            self.get_current_url()
+            self.assert_url("https://ohota26.ru/")
+            self.input_search("Лодка\n")
+            # self.driver.send_keys(Keys.RETURN)
+            self.get_screenshot()
+            Logger.add_end_step(url=self.driver.current_url, method='search_3')
 
     """Переход в мессенджер WhatsApp"""
     def messenger_whats_app(self):
-        Logger.add_start_step(method='messenger_whats_app')
-        self.get_current_url()
-        self.assert_url("https://ohota26.ru/")
-        self.click_whats_app_button()
-        time.sleep(2)
-        self.assert_url("https://ohota26.ru/")
-        Logger.add_end_step(url=self.driver.current_url, method='messenger_whats_app')
+        with allure.step("Messenger WhatsApp"):
+            Logger.add_start_step(method='messenger_whats_app')
+            self.get_current_url()
+            self.assert_url("https://ohota26.ru/")
+            self.click_whats_app_button()
+            time.sleep(2)
+            self.assert_url("https://ohota26.ru/")
+            Logger.add_end_step(url=self.driver.current_url, method='messenger_whats_app')
 
     """Переход в мессенджер Telegram"""
     def messenger_telegram(self):
-        Logger.add_start_step(method='messenger_telegram')
-        self.get_current_url()
-        self.assert_url("https://ohota26.ru/")
-        self.click_telegram_button()
-        time.sleep(2)
-        self.assert_url("https://ohota26.ru/")
-        Logger.add_end_step(url=self.driver.current_url, method='messenger_telegram')
+        with allure.step("Messenger Telegram"):
+            Logger.add_start_step(method='messenger_telegram')
+            self.get_current_url()
+            self.assert_url("https://ohota26.ru/")
+            self.click_telegram_button()
+            time.sleep(2)
+            self.assert_url("https://ohota26.ru/")
+            Logger.add_end_step(url=self.driver.current_url, method='messenger_telegram')
 
     """Переход в мессенджер Vk"""
     def messenger_vk(self):
-        Logger.add_start_step(method='messenger_vk')
-        self.get_current_url()
-        self.assert_url("https://ohota26.ru/")
-        self.click_vk_button()
-
-        time.sleep(2)
-        self.assert_url("https://ohota26.ru/")
-        Logger.add_end_step(url=self.driver.current_url, method='messenger_vk')
+        with allure.step("Messenger VK"):
+            Logger.add_start_step(method='messenger_vk')
+            self.get_current_url()
+            self.assert_url("https://ohota26.ru/")
+            self.click_vk_button()
+            time.sleep(2)
+            self.assert_url("https://ohota26.ru/")
+            Logger.add_end_step(url=self.driver.current_url, method='messenger_vk')
 

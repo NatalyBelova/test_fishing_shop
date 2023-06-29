@@ -1,4 +1,6 @@
 import time
+
+import allure
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -39,11 +41,12 @@ class Cart_page(Base):
 
     """Сверяем, что в корзине верный продукт и нажимаем кнопку продолжить"""
     def product_confirmation(self):
-        Logger.add_start_step(method='product_confirmation')
-        self.assert_word(self.get_value_product(), "Мешок Tramp спальный Mersey R оранжево-серый TRS-019")
-        self.get_screenshot()
-        self.click_make_order_button()
-        Logger.add_end_step(url=self.driver.current_url, method='product_confirmation')
+        with allure.step("Product confirmation"):
+            Logger.add_start_step(method='product_confirmation')
+            self.assert_word(self.get_value_product(), "Мешок Tramp спальный Mersey R оранжево-серый TRS-019")
+            self.get_screenshot()
+            self.click_make_order_button()
+            Logger.add_end_step(url=self.driver.current_url, method='product_confirmation')
 
 
 

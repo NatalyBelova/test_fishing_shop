@@ -1,5 +1,7 @@
 import time
 from telnetlib import EC
+
+import allure
 from selenium.webdriver.common.by import By
 from selenium.webdriver import ActionChains
 from selenium.webdriver.support.wait import WebDriverWait
@@ -79,15 +81,16 @@ class Products_page(Base):
 
     """Используем определенные фильтры для выбора нужного товара"""
     def select_products(self):
-        Logger.add_start_step(method='select_products')
-        self.click_filter_size()
-        self.click_filter_size_check_box()
-        self.click_filter_weight()
-        self.click_filter_weight_check_box()
-        self.driver.execute_script("window.scrollTo(0, -300)")
-        time.sleep(1)
-        self.click_add_to_cart_button()
-        self.get_screenshot()
-        self.click_cart()
-        Logger.add_end_step(url=self.driver.current_url, method='select_products')
+        with allure.step("Select products"):
+            Logger.add_start_step(method='select_products')
+            self.click_filter_size()
+            self.click_filter_size_check_box()
+            self.click_filter_weight()
+            self.click_filter_weight_check_box()
+            self.driver.execute_script("window.scrollTo(0, -300)")
+            time.sleep(1)
+            self.click_add_to_cart_button()
+            self.get_screenshot()
+            self.click_cart()
+            Logger.add_end_step(url=self.driver.current_url, method='select_products')
 
